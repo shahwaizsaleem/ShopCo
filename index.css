@@ -1,0 +1,74 @@
+/* === Global Reset & Typography === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Integral CF';
+  src: url('./assets/fonts/IntegralCF-Regular.woff2') format('woff2'),
+       url('./assets/fonts/IntegralCF-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Integral CF';
+  src: url('./assets/fonts/IntegralCF-Bold.woff2') format('woff2'),
+       url('./assets/fonts/IntegralCF-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Integral CF', sans-serif;
+  background-color: #f9fafb; /* Tailwind gray-50 */
+  color: #1f2937; /* Tailwind gray-800 */
+  line-height: 1.5;
+}
+
+html, body {
+  overflow-x: hidden; /* 🚫 remove horizontal scroll */
+  overflow-y: auto;   /* ✅ keep vertical scroll */
+}
+
+/* === Links === */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #2563eb; /* Tailwind blue-600 */
+}
+
+/* === Buttons (fallback for non-Tailwind) === */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font: inherit;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* === Utility Helpers === */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
